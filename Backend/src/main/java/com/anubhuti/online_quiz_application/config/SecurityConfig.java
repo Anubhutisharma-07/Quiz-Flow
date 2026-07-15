@@ -76,6 +76,11 @@ public class SecurityConfig {
                                 "/questions/**"
                         ).permitAll()
 
+                        .requestMatchers(HttpMethod.POST,
+                                "/quizzes/**",
+                                "/questions/**"
+                        ).permitAll()
+
                         .anyRequest().authenticated()
                 );
 
